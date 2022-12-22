@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-slate-300 py-6 px-8 text-white w-full fixed top-0 flex justify-between items-center backdrop-blur-sm"
+    class="z-10 text-slate-300 py-6 px-8 text-white w-full fixed top-0 flex justify-between items-center backdrop-blur-sm"
   >
     <div>
       <div class="loader">
@@ -22,7 +22,10 @@
       </div>
     </div>
     <div>
-      <img src="~/assets/icons/poke-logo.gif" class="h-16 w-16" />
+      <img
+        src="~/assets/icons/poke-logo.gif"
+        class="h-12 sm:h-16 w-12 sm:w-16"
+      />
     </div>
   </div>
 </template>
