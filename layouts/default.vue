@@ -1,7 +1,9 @@
 <template>
   <div class="main-bg min-h-screen">
     <HeadBar />
-    <Nuxt />
+    <div class="px-8">
+      <Nuxt />
+    </div>
     <MenuBar />
   </div>
 </template>

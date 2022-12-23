@@ -1,5 +1,5 @@
 <template>
-  <div class="text-slate-300 px-8 pt-36 pb-28">
+  <div class="text-slate-300 pt-24 pb-28">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 place-items-center">
       <div>
         <img src="~/assets/icons/poke-statue.gif" class="h-60 sm:h-80" />
@@ -59,15 +59,20 @@
       <div><PokeCard /></div>
       <div><PokeCard /></div>
       <div><PokeCard /></div>
+      <PokeListSpinner />
+      <PokeListSpinner />
+      <PokeListSpinner />
+      <PokeListSpinner />
     </div>
   </div>
 </template>
 
 <script>
 import PokeCard from '~/components/PokeCard.vue'
+import PokeListSpinner from '~/components/PokeListSpinner.vue'
 
 export default {
   name: 'IndexPage',
-  components: { PokeCard },
+  components: { PokeCard, PokeListSpinner },
 }
 </script>

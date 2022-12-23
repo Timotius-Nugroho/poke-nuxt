@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-10 text-slate-300 py-6 px-8 text-white w-full fixed top-0 flex justify-between items-center backdrop-blur-sm"
+    class="text-slate-300 py-6 px-8 text-white w-full flex justify-between items-center"
   >
     <div>
       <div class="loader">

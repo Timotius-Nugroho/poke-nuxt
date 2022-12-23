@@ -1,16 +1,16 @@
 <!-- Please remove this file from your project -->
 <template>
   <div class="card">
-    <div
-      class="card2 bg-gradient-to-r from-[#171719] via-[#171719] to-[#202329] flex items-center"
-    >
+    <div class="card2 bg-[#171719] flex items-center">
       <img
         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
         class="w-32"
       />
       <div class="h-fit">
         <div class="font-semibold">pokemon name</div>
-        <div class="text-xs mt-1 text-yellow-500">No Chaught yet</div>
+        <div class="text-xs mt-1 text-yellow-500 bg-[#202329] p-2 rounded-md">
+          [~wouewo~]
+        </div>
       </div>
     </div>
   </div>
