@@ -21,7 +21,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/nuxt-observe-visibility.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,7 +38,9 @@ export default {
   modules: ['@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['nuxt-observe-visibility'],
+  },
 
   axios: {
     baseURL: 'https://api.spacex.land/graphql', // Used as fallback if no runtime config is provided

@@ -16,7 +16,7 @@
         class="pl-3 text-yellow-400 h-fit"
         :class="[$nuxt.$route.path == '/' ? '' : 'hidden']"
       >
-        My poke
+        pokemons
       </div>
     </div>
     <div
@@ -36,11 +36,26 @@
         class="pl-3 text-yellow-400 h-fit"
         :class="[$nuxt.$route.path == '/my-poke' ? '' : 'hidden']"
       >
-        My poke
+        my poke
       </div>
     </div>
-    <div class="flex items-center cursor-pointer">
-      <img src="~/assets/icons/catch.svg" class="h-6 sm:h-8 w-6 sm:w-8" />
+    <div class="flex items-center cursor-pointer" @click="moveToPage('/about')">
+      <img
+        :src="[
+          $nuxt.$route.path == '/about'
+            ? require('~/assets/icons/catch-on.svg')
+            : require('~/assets/icons/catch-off.svg'),
+        ]"
+        class="h-6 sm:h-8 w-6 sm:w-8"
+        :class="[$nuxt.$route.path == '/about' ? 'animate-spin' : '']"
+      />
+
+      <div
+        class="pl-3 text-yellow-400 h-fit"
+        :class="[$nuxt.$route.path == '/about' ? '' : 'hidden']"
+      >
+        calculating...
+      </div>
     </div>
     <div class="flex items-center cursor-pointer">
       <img src="~/assets/icons/ask-off.svg" class="h-6 sm:h-8 w-6 sm:w-8" />

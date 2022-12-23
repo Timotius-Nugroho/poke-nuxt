@@ -2,12 +2,9 @@
 <template>
   <div class="card">
     <div class="card2 bg-[#171719] flex items-center">
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        class="w-32"
-      />
+      <img :src="[imgUrl]" class="w-32" />
       <div class="h-fit">
-        <div class="font-semibold">pokemon name</div>
+        <div class="font-semibold">{{ name }}</div>
         <div class="text-xs mt-1 text-yellow-500 bg-[#202329] p-2 rounded-md">
           [~wouewo~]
         </div>
@@ -19,6 +16,11 @@
 <script>
 export default {
   name: 'PokeCard',
+  props: {
+    id: String,
+    name: String,
+    imgUrl: String,
+  },
 }
 </script>
 
