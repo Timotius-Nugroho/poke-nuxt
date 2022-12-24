@@ -13,10 +13,10 @@
         :class="[$nuxt.$route.path == '/' ? 'animate-spin' : '']"
       />
       <div
-        class="pl-3 text-yellow-400 h-fit"
-        :class="[$nuxt.$route.path == '/' ? '' : 'hidden']"
+        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        :class="[$nuxt.$route.path == '/' ? 'w-[108px]' : 'w-0']"
       >
-        pokemons
+        <div class="pl-3">pokemons</div>
       </div>
     </div>
     <div
@@ -33,10 +33,10 @@
         :class="[$nuxt.$route.path == '/my-poke' ? 'animate-spin' : '']"
       />
       <div
-        class="pl-3 text-yellow-400 h-fit"
-        :class="[$nuxt.$route.path == '/my-poke' ? '' : 'hidden']"
+        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        :class="[$nuxt.$route.path == '/my-poke' ? 'w-[92px]' : 'w-0']"
       >
-        my poke
+        <div class="pl-3">my poke</div>
       </div>
     </div>
     <div class="flex items-center cursor-pointer" @click="moveToPage('/about')">
@@ -47,14 +47,17 @@
             : require('~/assets/icons/catch-off.svg'),
         ]"
         class="h-6 sm:h-8 w-6 sm:w-8"
-        :class="[$nuxt.$route.path == '/about' ? 'animate-spin' : '']"
+        :class="[$nuxt.$route.path == '/about' ? 'animate-bounce' : '']"
       />
 
       <div
-        class="pl-3 text-yellow-400 h-fit"
-        :class="[$nuxt.$route.path == '/about' ? '' : 'hidden']"
+        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        :class="[$nuxt.$route.path == '/about' ? 'w-[76px]' : 'w-0']"
       >
-        calculating...
+        <div class="pl-3">
+          <!-- calculating... -->
+          catch!
+        </div>
       </div>
     </div>
     <div class="flex items-center cursor-pointer">

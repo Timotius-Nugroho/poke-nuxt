@@ -1,0 +1,26 @@
+query {
+  pokemon(name: "charmander") {
+    stats {
+      base_stat
+      stat {
+        name
+      }
+    }
+    forms {
+      name
+      url
+    }
+    base_experience
+    types {
+      type {
+        name
+      }
+    }
+    abilities {
+      ability {
+        name
+      }
+    }
+    weight
+  }
+}
