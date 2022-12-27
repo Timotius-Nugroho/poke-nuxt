@@ -6,10 +6,6 @@ query {
         name
       }
     }
-    forms {
-      name
-      url
-    }
     base_experience
     types {
       type {
@@ -21,6 +17,5 @@ query {
         name
       }
     }
-    weight
   }
 }

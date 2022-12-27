@@ -21,11 +21,13 @@
           It's called Pokémon! These cute and powerful creatures have captured
           the hearts of people everywhere.
         </div>
-        <button
-          class="mt-8 text-xl text-slate-200 bg-gradient-to-r from-lime-600 to-amber-600 py-2 px-5 rounded-xl"
-        >
-          Ready to catch 'em all?
-        </button>
+        <a href="#poke-list">
+          <button
+            class="mt-8 text-xl text-slate-200 bg-gradient-to-r from-lime-600 to-amber-600 py-2 px-5 rounded-xl"
+          >
+            Ready to catch 'em all?
+          </button>
+        </a>
       </div>
     </div>
 
@@ -49,6 +51,7 @@
     </div>
 
     <div
+      id="poke-list"
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6"
     >
       <div>

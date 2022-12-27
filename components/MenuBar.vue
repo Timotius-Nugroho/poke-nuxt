@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-10 rounded-t-[35px] py-6 px-8 text-white bg-[#202329] w-full fixed bottom-0 flex justify-between"
+    class="z-10 rounded-t-[35px] py-6 px-8 bg-[#202329] w-full fixed bottom-0 flex justify-between"
   >
     <div class="flex items-center cursor-pointer" @click="moveToPage('/')">
       <img
@@ -13,7 +13,7 @@
         :class="[$nuxt.$route.path == '/' ? 'animate-spin' : '']"
       />
       <div
-        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        class="text-yellow-500 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
         :class="[$nuxt.$route.path == '/' ? 'w-[108px]' : 'w-0']"
       >
         <div class="pl-3">pokemons</div>
@@ -33,13 +33,13 @@
         :class="[$nuxt.$route.path == '/my-poke' ? 'animate-spin' : '']"
       />
       <div
-        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        class="text-yellow-500 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
         :class="[$nuxt.$route.path == '/my-poke' ? 'w-[92px]' : 'w-0']"
       >
         <div class="pl-3">my poke</div>
       </div>
     </div>
-    <div class="flex items-center cursor-pointer" @click="moveToPage('/about')">
+    <div class="flex items-center cursor-pointer">
       <img
         :src="[
           $nuxt.$route.path == '/about'
@@ -47,11 +47,11 @@
             : require('~/assets/icons/catch-off.svg'),
         ]"
         class="h-6 sm:h-8 w-6 sm:w-8"
-        :class="[$nuxt.$route.path == '/about' ? 'animate-bounce' : '']"
+        :class="[$nuxt.$route.path == '/about' ? 'animate-spin' : '']"
       />
 
       <div
-        class="text-yellow-400 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        class="text-yellow-500 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
         :class="[$nuxt.$route.path == '/about' ? 'w-[76px]' : 'w-0']"
       >
         <div class="pl-3">

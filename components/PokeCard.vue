@@ -1,7 +1,10 @@
 <!-- Please remove this file from your project -->
 <template>
   <div class="card">
-    <div class="card2 bg-[#171719] flex items-center">
+    <div
+      class="card2 bg-[#171719] flex items-center"
+      @click="moveToDetailPoke()"
+    >
       <img :src="[imgUrl]" class="w-32" />
       <div class="h-fit">
         <div class="font-semibold">{{ name }}</div>
@@ -17,9 +20,26 @@
 export default {
   name: 'PokeCard',
   props: {
-    id: String,
-    name: String,
-    imgUrl: String,
+    id: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    imgUrl: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    moveToDetailPoke() {
+      this.$router.push({
+        path: '/about',
+        query: { id: this.id },
+      })
+    },
   },
 }
 </script>
