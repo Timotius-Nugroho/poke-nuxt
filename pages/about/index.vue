@@ -1,14 +1,12 @@
 <template>
   <div class="text-slate-300 pt-20 pb-28">
     <div class="grid grid-cols-1 md:grid-cols-3">
-      <PokeFace
-        img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
-      />
+      <PokeFace :img-url="$route.query.artwork" />
       <div class="col-span-2 ml-0 md:ml-8 mt-16 sm:mt-20 md:mt-0">
         <div
           class="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold"
         >
-          Ivisauryy
+          {{ $route.query.name }}
         </div>
         <div class="flex justify-end mt-12 mb-4 md:mb-8 font-bold">
           <div

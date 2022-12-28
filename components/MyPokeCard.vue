@@ -7,21 +7,26 @@
           <div
             class="w-fit text-white font-medium text-lg sm:text-xl bg-[#202329] py-2 px-8 rounded-tr-[15px] rounded-bl-[15px]"
           >
-            Nekorama
+            {{ alias }}
           </div>
         </div>
-        <img
-          class="h-72 mx-auto pb-6"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
-        />
+        <img class="h-72 mx-auto pb-6" :src="[artwork]" />
       </div>
     </div>
     <div class="card-info text-white p-4">
-      <p class="text-title">Ivysauryy</p>
-      <p class="text-body">caught on 11 january 2020</p>
-      <button class="font-bold bg-yellow-500 text-black px-4 py-1 rounded-md">
-        release
-      </button>
+      <p class="text-title">{{ name }}</p>
+      <p class="text-body">caught on {{ caughtOn }}</p>
+      <div class="flex">
+        <button class="font-bold bg-yellow-500 text-black px-4 py-1 rounded-md">
+          release
+        </button>
+        <button
+          class="bg-yellow-500 py-1 px-2 rounded-md ml-1"
+          @click="moveToDetailPoke()"
+        >
+          <img src="~/assets/icons/eye.svg" class="h-4" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +34,32 @@
 <script>
 export default {
   name: 'MyPokeCard',
+  props: {
+    alias: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    caughtOn: {
+      type: String,
+      required: true,
+    },
+    artwork: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    moveToDetailPoke() {
+      this.$router.push({
+        path: '/about',
+        query: { name: this.name, artwork: this.artwork },
+      })
+    },
+  },
 }
 </script>
 

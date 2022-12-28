@@ -56,58 +56,58 @@
     >
       <div>
         <PokeCard
-          id="-"
           name="Blulusaurr"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="mangekyo"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="Tyuudgj"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="Uiybhssasa"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="Yhhghsqqw"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="Opiiyuewbb"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="BBHgjdkasug7"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div>
         <PokeCard
-          id="-"
           name="Opokmkjas"
           img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+          artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
         />
       </div>
       <div v-observe-visibility="loaderVisible"><PokeListSpinner /></div>

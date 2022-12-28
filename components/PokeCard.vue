@@ -20,10 +20,6 @@
 export default {
   name: 'PokeCard',
   props: {
-    id: {
-      type: String,
-      required: true,
-    },
     name: {
       type: String,
       required: true,
@@ -32,12 +28,16 @@ export default {
       type: String,
       required: true,
     },
+    artwork: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     moveToDetailPoke() {
       this.$router.push({
         path: '/about',
-        query: { id: this.id },
+        query: { name: this.name, artwork: this.artwork },
       })
     },
   },
