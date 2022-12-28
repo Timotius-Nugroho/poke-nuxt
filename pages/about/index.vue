@@ -2,7 +2,7 @@
   <div class="text-slate-300 pt-20 pb-28">
     <div class="grid grid-cols-1 md:grid-cols-3">
       <PokeFace
-        img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+        img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
       />
       <div class="col-span-2 ml-0 md:ml-8 mt-16 sm:mt-20 md:mt-0">
         <div
