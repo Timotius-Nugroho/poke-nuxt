@@ -63,7 +63,7 @@
         <div
           class="font-bold text-sm bg-yellow-500 text-black rounded-[15px] px-4 py-1 mr-1 mb-2"
         >
-          bindewewew
+          {{ $store.state.errMsg }}
         </div>
       </div>
     </div>

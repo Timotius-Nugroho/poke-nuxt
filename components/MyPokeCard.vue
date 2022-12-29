@@ -17,7 +17,15 @@
       <p class="text-title">{{ name }}</p>
       <p class="text-body">caught on {{ caughtOn }}</p>
       <div class="flex">
-        <button class="font-bold bg-yellow-500 text-black px-4 py-1 rounded-md">
+        <button
+          class="font-bold px-4 py-1 rounded-md"
+          :class="[
+            alias === 'Initial Pokemon'
+              ? 'bg-orange-500 text-neutral-800 cursor-text'
+              : 'bg-yellow-500 text-black',
+          ]"
+          @click="removePoke()"
+        >
           release
         </button>
         <button
@@ -58,6 +66,10 @@ export default {
         path: '/about',
         query: { name: this.name, artwork: this.artwork },
       })
+    },
+    removePoke() {
+      if (this.alias === 'Initial Pokemon') return
+      this.$store.commit('REMOVE_POKE', this.name)
     },
   },
 }
