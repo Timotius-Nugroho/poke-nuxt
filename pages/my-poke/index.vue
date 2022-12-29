@@ -20,6 +20,18 @@
       caught-on="20 sept 2022"
       artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
     />
+    <MyPokeCard
+      alias="Ijuyus"
+      name="Ibysaur"
+      caught-on="20 sept 2022"
+      artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+    />
+    <MyPokeCard
+      alias="Ijuyus"
+      name="Ibysaur"
+      caught-on="20 sept 2022"
+      artwork="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+    />
   </div>
 </template>
 

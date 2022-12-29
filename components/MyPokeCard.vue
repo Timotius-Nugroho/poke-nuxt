@@ -122,8 +122,7 @@ export default {
 
 /*Hover*/
 .card:hover {
-  transform: translateY(5%);
-  margin-bottom: 16px;
+  transform: translateY(2%);
 }
 
 .card:hover:before {
