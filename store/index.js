@@ -16,7 +16,6 @@ export const state = () => ({
 // contains your mutations
 export const mutations = {
   ADD_POKE(state, poke) {
-    state.errMsg = ''
     const isExist = state.myPokes.some((e) => e.name === poke.name)
     if (isExist) {
       state.errMsg = 'This pokemon has been caught'
@@ -30,6 +29,9 @@ export const mutations = {
     state.myPokes = [...newPokes]
   },
   TOGGLE_CALC(state) {
+    if (!state.isCalculating) {
+      state.errMsg = ''
+    }
     state.isCalculating = !state.isCalculating
   },
 }

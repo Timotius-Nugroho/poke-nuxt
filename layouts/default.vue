@@ -4,6 +4,7 @@
     <div class="px-8">
       <Nuxt />
     </div>
+    <CalcIndicators />
     <MenuBar />
   </div>
 </template>
