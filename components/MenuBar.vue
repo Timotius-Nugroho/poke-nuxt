@@ -68,8 +68,25 @@
         </div>
       </div>
     </div>
-    <div class="flex items-center cursor-pointer">
-      <img src="~/assets/icons/ask-off.svg" class="h-6 sm:h-8 w-6 sm:w-8" />
+
+    <div
+      class="flex items-center cursor-pointer"
+      @click="moveToPage('/how-to-play')"
+    >
+      <img
+        :src="[
+          $nuxt.$route.path == '/how-to-play'
+            ? require('~/assets/icons/ask-on.svg')
+            : require('~/assets/icons/ask-off.svg'),
+        ]"
+        class="h-6 sm:h-8 w-6 sm:w-8"
+      />
+      <div
+        class="text-yellow-500 h-[26px] text-clip overflow-hidden transition-[width] duration-300"
+        :class="[$nuxt.$route.path == '/how-to-play' ? 'w-[87px]' : 'w-0']"
+      >
+        <div class="pl-3">guideline</div>
+      </div>
     </div>
   </div>
 </template>
