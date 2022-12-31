@@ -9,7 +9,7 @@
       <div class="h-fit">
         <div class="font-semibold">{{ name }}</div>
         <div class="text-xs mt-1 text-yellow-500 bg-[#202329] p-2 rounded-md">
-          [~wouewo~]
+          {{ isObtained ? '~obtained~' : 'not yet obtained' }}
         </div>
       </div>
     </div>
@@ -31,6 +31,14 @@ export default {
     artwork: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    isObtained() {
+      const isExist = this.$store.state.myPokes.some(
+        (e) => e.name === this.name
+      )
+      return isExist
     },
   },
   methods: {

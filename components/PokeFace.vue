@@ -3,7 +3,7 @@
     <div class="z-[1] p-5">
       <img :src="[imgUrl]" />
       <div class="rounded-[15px] bg-[#292934] w-fit py-1 px-4">
-        80 <span class="italic">Exp</span>
+        {{ exp }} <span class="italic">Exp</span>
       </div>
     </div>
   </div>
@@ -15,6 +15,10 @@ export default {
   props: {
     imgUrl: {
       type: String,
+      required: true,
+    },
+    exp: {
+      type: Number,
       required: true,
     },
   },

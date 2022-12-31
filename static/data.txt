@@ -19,3 +19,14 @@ query {
     }
   }
 }
+
+`query pokemons($limit: Int, $offset: Int) {
+  pokemons(limit: $limit, offset: $offset) {
+    nextOffset
+    results {
+      name
+      image
+      artwork
+    }
+  }
+}`

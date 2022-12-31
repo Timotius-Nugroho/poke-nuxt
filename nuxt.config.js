@@ -43,6 +43,6 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://api.spacex.land/graphql', // Used as fallback if no runtime config is provided
+    baseURL: 'https://graphql-pokeapi.graphcdn.app/', // Used as fallback if no runtime config is provided
   },
 }
