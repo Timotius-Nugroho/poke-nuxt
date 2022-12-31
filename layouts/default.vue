@@ -4,14 +4,13 @@
     <div class="px-8">
       <Nuxt />
     </div>
+    <CalcIndicators />
     <MenuBar />
   </div>
 </template>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+<style scoped>
 .main-bg {
   background-image: radial-gradient(circle, #292934 2%, #171719 30%);
-  font-family: 'Poppins', sans-serif;
 }
 </style>

@@ -54,62 +54,13 @@
       id="poke-list"
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6"
     >
-      <div>
-        <PokeCard
-          id="-"
-          name="Blulusaurr"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="mangekyo"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="Tyuudgj"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="Uiybhssasa"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="Yhhghsqqw"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="Opiiyuewbb"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="BBHgjdkasug7"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
-        />
-      </div>
-      <div>
-        <PokeCard
-          id="-"
-          name="Opokmkjas"
-          img-url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
-        />
-      </div>
+      <PokeCard
+        v-for="(pokemon, index) in pokemons"
+        :key="index"
+        :name="pokemon.name"
+        :img-url="pokemon.image"
+        :artwork="pokemon.artwork"
+      />
       <div v-observe-visibility="loaderVisible"><PokeListSpinner /></div>
       <PokeListSpinner />
       <PokeListSpinner />
@@ -125,10 +76,54 @@ import PokeListSpinner from '~/components/PokeListSpinner.vue'
 export default {
   name: 'IndexPage',
   components: { PokeCard, PokeListSpinner },
+  data() {
+    return {
+      offset: 0,
+      pokemons: [],
+      isLoading: false,
+    }
+  },
+  created() {
+    this.getPokemons()
+  },
   methods: {
+    getPokemons() {
+      const query = `query pokemons($limit: Int, $offset: Int) {
+        pokemons(limit: $limit, offset: $offset) {
+          nextOffset
+          results {
+            name
+            image
+            artwork
+          }
+        }
+      }`
+
+      this.isLoading = true
+      this.$axios
+        .post('/', {
+          query,
+          variables: {
+            limit: 8,
+            offset: this.offset,
+          },
+        })
+        .then((res) => {
+          this.pokemons = [...this.pokemons, ...res.data.data.pokemons.results]
+          this.offset = res.data.data.pokemons.nextOffset
+        })
+        .catch((err) => {
+          console.warn(JSON.stringify(err))
+        })
+        .finally(() => {
+          this.isLoading = false
+        })
+    },
     loaderVisible(isVisible) {
       if (!isVisible) return
-      console.log('BLOAD NEW DATA')
+      if (!this.isLoading) {
+        this.getPokemons()
+      }
     },
   },
 }
