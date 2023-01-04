@@ -60,7 +60,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -69,5 +69,20 @@ export default {
 
   axios: {
     baseURL: 'https://graphql-pokeapi.graphcdn.app/', // Used as fallback if no runtime config is provided
+  },
+
+  pwa: {
+    meta: {
+      title: 'My Pokemon',
+      author: 'timotius nugroho',
+    },
+    manifest: {
+      name: 'My Pokemon',
+      short_name: 'My Poke',
+      lang: 'en',
+      description: 'Ready to catch `em all?',
+      theme_color: '#171719',
+      background_color: '#171719',
+    },
   },
 }
