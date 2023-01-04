@@ -81,8 +81,8 @@ export default {
       short_name: 'My Poke',
       lang: 'en',
       description: 'Ready to catch `em all?',
-      theme_color: '#171719',
-      background_color: '#171719',
+      theme_color: '#000000',
+      background_color: '#000000',
     },
   },
 }
